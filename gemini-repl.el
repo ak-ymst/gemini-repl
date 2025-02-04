@@ -1,4 +1,4 @@
-(defvar gemini-api-key (getenv "GENINI_API_KEY"))
+(defvar gemini-api-key (getenv "GEMINI_API_KEY"))
 
 (defun gemini-send-request (input-text)
   "Send INPUT-TEXT to Gemini and return the response."
