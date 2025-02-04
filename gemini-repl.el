@@ -16,14 +16,6 @@
             (cdr (assoc "output" (elt (cdr (assoc "candidates" json-data)) 0))))
         "No response from Gemini"))))
 
-(defun gemini-login-gcloud ()
-  "Attempt to log in to Google Cloud."
-  (interactive)
-  (let ((output (shell-command-to-string "gcloud auth login --brief")))
-    (if (string-match "You are now logged in" output)
-        "Login successful"
-      "Login failed or requires manual interaction")))
-
 (defun gemini-repl ()
   "Start a simple REPL for interacting with Gemini."
   (interactive)
